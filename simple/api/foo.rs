@@ -1,7 +1,6 @@
 // Example api/foo.rs
-use vercel_runtime::{Body, Error, Request, Response, StatusCode, bundled_api};
+use vercel_runtime::{Body, Error, Request, Response, StatusCode};
 
-#[bundled_api(path="api/foo")]
 pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
     Ok(Response::builder()
         .status(StatusCode::OK)
